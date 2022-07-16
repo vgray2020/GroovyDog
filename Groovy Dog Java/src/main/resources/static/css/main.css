@@ -1,0 +1,458 @@
+
+@import url( "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rock Salt', cursive;
+    text-align:center;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*HEADER includes LOGO and NAV BAR*/
+
+/*the entire nav bar area*/
+header {
+position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+    background-color:lightgray;
+    display: flex;
+    justify-content: space-between;
+	width: 100%;
+}
+
+header #logo {
+    margin: 18px 50px;
+}
+
+header #logo:hover {
+    background-color: black;
+    transition: color .2s ease;
+}
+
+/*nav bar tabs and the responsive toggler and cross*/
+header nav {
+    margin-top: 35px;
+    margin-right: 200px;
+}
+
+header nav #cross {
+    display: none;
+    transition: all .3s ease;
+}
+
+header nav #cross:hover{
+	transform: scale(1.3);
+	transition: all .3s ease;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 30px;
+}
+
+header nav ul li a {
+    color:rgb(214, 148, 60);
+    text-transform: capitalize;
+    font-size:15px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:0;
+    height: 2px;
+    background-color: black;
+    transition: all .5s ease;
+}
+
+header ul li a:hover:after{
+    width: 100%;
+    transition: all .5s ease;
+}
+
+/*Toggler or HAMBURGER MENU ICON*/
+header .toggler {
+    margin: 40px 30px;
+    display: none;
+}
+
+header .toggler i {
+    cursor: pointer;
+    font-size: 30px;
+    display: block;
+    transition: all .3s ease;
+}
+
+header .toggler i:hover{
+    transform:scale(1.3);
+    transition: all .3s ease;
+}
+/*HOME PAGE*/
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(/images/corgi2.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*home page middle section text*/
+ .home .banner_text {
+     margin-top: 0;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content:center;
+     align-items: center;
+}
+
+.home .banner_text h1 {
+    font-size: 100px;
+    letter-spacing: 8px;
+}
+
+.home .banner_text p {
+    font-size: 25px;
+    font-weight: bold;
+    font-family:'sans-serif';
+}
+
+.home .banner_text h2 {
+    font-size:55px;
+    font-weight: bold;
+    font-family:'sans-serif';
+}
+
+/*BOOK NOW button
+.home .banner_text a {
+    color:white;
+    background-color:rgb(255, 123, 0);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.home .banner_text a:hover{
+    color: black;
+    background-color: white;
+    transition: color .2s ease;
+}*/
+
+/*ABOUT US Section-need to change all from service to about us*/
+.service{
+	width: 100%;
+	background-color: #fff;
+}
+.service .main_content{
+	/*background-color: yellow;*/
+	width: 100%;
+	height: 25vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.service .main_content h1{
+	font-size: 45px;
+	font-family: 'Lobster';
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.service .main_content p{
+	font-family: sans-serif;
+	font-style: italic;
+	color: gray;
+}
+.service .cards{
+	width: 100%;
+	height: auto;
+	background: linear-gradient(rgb(255, 123, 0),rgba(0,0,0,0.6));
+
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+}
+.service .cards .card{
+	width: 250px;
+	padding: 30px 0;
+	cursor: pointer;
+	transition: all .5s ease;
+	/*background-color: #f1f1f1;*/
+}
+.service .cards .card i{
+	font-size: 10rem;
+	/*color: #000;*/
+}
+
+
+/*SERVICES section- need to change all from product to services*/
+.product{
+	width: 100%;
+	/*height: 200vh;*/
+	/*background-color: gray;*/
+}
+.product .product_main_text{
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.product .product_main_text h1{
+	font-size: 50px;
+	font-family: 'Lobster';
+	letter-spacing: 1px;
+}
+.product .product_main_text p{
+	color: gray;
+}
+.product .product_cards{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 50px;
+	/*align-items: center;*/
+}
+.product .product_cards .products{
+	/*background-color: #f1f1f1;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	align-items: center;
+	/*max-width: 488px;*/
+}
+.product .product_cards .products .lines a{
+	background-color: rgb(255, 123, 0);
+	padding: 10px 40px;
+	border-radius: 30px;
+	color: #fff;
+	line-height: 100px;
+	transition: .5s ease;
+}
+.product .product_cards .products .lines a:hover{
+	background: black;
+	transition: .5s ease;
+}
+/*TESTIMONIALS section*/
+.testimonials{
+	width: 100%;
+	/*height: 100vh;*/
+	/*background-color: green;*/
+}
+.testimonials .testi_text{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 20vh;
+}
+.testimonials .testi_text h1{
+	font-family: 'Lobster';
+	font-size: 50px;
+	letter-spacing: 1px;
+}
+.testimonials .testi_text p{
+	color: gray;
+}
+.testimonials .reviews{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background: orange;
+	padding: 40px;
+}
+.testimonials .reviews .revw_card {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	border: 2px solid #000;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 1px 30px 5px #000;
+	background-color: #fff;
+	margin-top: 10px;
+}
+.testimonials .reviews .revw_card .image{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid gray;
+}
+/*Contact section*/
+.contact{
+	width: 100%;
+	background-color: #000;
+}
+.contact footer{
+	width: 100%;
+	background-color: #000;
+	/*height: 30vh;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.contact footer .footerdivs{
+	width: 300px;
+	/*height: 200px;*/
+	padding: 30px;
+	/*background-color: yellow;*/
+}
+.contact footer .footerdivs p{
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Lobster';
+	margin-top: 10px;
+}
+.contact footer .footerdivs a{
+	color: #f1f1f1;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	display: block;
+	margin-top: 10px;
+	/*text-align: left;*/
+}
+.contact footer .footerdivs a:hover{
+	color: orange;
+}
+.contact footer .footerdivs i{
+    size:20px;
+	color: #fff;
+	display: block;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.contact footer .footerdivs i:hover{
+	color: orange;
+}
+.contact .copyright h2{
+	color: #f1f1f1;
+	font-size: 10px;
+	padding-bottom: 30px;
+}
+/*responsive css*/
+@media only screen and (max-width: 1000px){
+
+	.home header .toggler{
+		display: block;
+		/*z-index: 2;*/
+	}
+
+	.home header nav{
+		background-color: #f1f1f1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		height: 100%;
+		width: 0;
+		overflow: hidden;
+		z-index: 1;
+		transition: .5s ease;
+	}
+
+	.home header nav ul{
+		display: block;
+		margin-top: 100px;
+		/*width: 0;*/
+	}
+	.home header nav ul i#cross{
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		margin: 40px 85px;
+		font-size: 30px;
+		cursor: pointer;
+	}
+	.home header nav ul li{
+		display: block;
+		margin-top: 30px;
+	}
+	.home header nav ul li #bag{
+		font-size: 45px;
+	}
+	/*footer*/
+	.contact footer .footerdivs a{
+		display: inline-block;
+		padding: 0 10px;
+	}
+	.contact footer .footerdivs i{
+		display: inline-block;
+		padding: 0 10px;
+	}
+}
+/*/////////////////////////////////*/
+@media only screen and (max-width: 450px){
+	.home header #logo{
+		margin-left: 20px;
+	}
+	.home header #logo h1{
+		font-size: 32px;
+	}
+	.home .banner-text h1{
+		font-size: 30px;
+	}
+	.home .banner-text p{
+		font-size: 10px;
+	}
+	.home .banner-text a{
+		font-size: 15px;
+	}
+	.product .product_cards .products{
+		width: 300px;
+	}
+	.product .product_cards .products img{
+		width: 300px;
+	}
+
+	/*footer*/
+	.contact footer .footerdivs a{
+		display: inline-block;
+		padding: 0 10px;
+	}
+	.contact footer .footerdivs i{
+		display: inline-block;
+		padding: 0 10px;
+	}
+}
